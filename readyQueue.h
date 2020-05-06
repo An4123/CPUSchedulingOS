@@ -3,26 +3,24 @@
 // Class: Operating Systems
 // Assignment: Lab 3
 //
-// Comments:
 
 #ifndef CPUSCHEDULINGOS_READYQUEUE_H
 #define CPUSCHEDULINGOS_READYQUEUE_H
 
 #include "process.h"
 
-const int MAX_PROCESS = 101;
+const int MAX_PROCESS = 101;            // MAXIMUM NUMBER OF PROCESSES
 
-class readyQueue {
+class readyQueue {                      // Class for Queue of processes
 public:
-    process* myQueue[MAX_PROCESS];
-    int size;
-    readyQueue();
-    void push(process*);
-    process* pop();
+    process* myQueue[MAX_PROCESS]{};    // array of processes
+    int size;                           // size of queue
+    readyQueue();                       // constructor
+    void push(process*);                // add process
+    process* pop();                     // remove process
+    bool procExist(process&);           // check if process exist
 
-    void sortByTime();
-    void sortByPriority();
-    bool procExist(process&);
+    void sortByTime();                  // for the shortest algorithm
 
 };
 

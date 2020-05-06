@@ -1,48 +1,29 @@
-//
-// Created by super on 5/6/2020.
+// Name: An Vo
+// Date: 5/4/2020.
+// Class: Operating Systems
+// Assignment: Lab 3
 //
 
 #ifndef CPUSCHEDULINGOS_PROCESS_H
 #define CPUSCHEDULINGOS_PROCESS_H
-class process {
-private:
-// creating process with after reading file
+class process {                  // class for each process
+public:
     int PID;
     int arrivalTime;
     int CPUburstTime;
-    int priority;
 
-public:
-//constructors
-    process();
-
-// when we read directly from file
+    process();                   //constructors
     explicit process(int[]);
 
-//setter & getter
-
-    int getPID();
-
-    int getArrivalTime();
-
-    int getCPUburstTime();
-
-    int getPriority();
-
-//public variable
 
     int remainingCPU;
     int contextSwitchNumber;
-// bool waiting;
     bool finished;
-// bool prempted;
-    bool firstTimeInCPU; // useful to calculate responsetime
 
-// variable to track timing
 
-    float responseTime; // how long it has to wait go get into cpu
-    float finishTime; // what time did it finish
-    float waitingTime; // time to wait outside of cpu after being ready
-    float turnAroundTime; // total time to execute. waiting + execution.
-#endif //CPUSCHEDULINGOS_PROCESS_H
+    float finishTime;                 // keep track of finished time
+    float waitingTime;                // time waiting for cpu to be ready
+    float turnAroundTime;             // waiting + execution.
+
 };
+#endif //CPUSCHEDULINGOS_PROCESS_H
