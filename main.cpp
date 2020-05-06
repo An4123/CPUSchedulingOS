@@ -13,7 +13,11 @@ int main(int argc, char* argv[]) {
     int algFunc = -1;
     int quantumTime = 0;
 
-    inputFile = string(argv[1]);                    // get input file from command line
+//    int quantumTime = 4;              // test quantumtime
+//    inputFile = "input4";             // test input
+//    typeOfAlgorithm = "FCFS";         // test algorithms
+
+     inputFile = string(argv[1]);                    // get input file from command line
     typeOfAlgorithm = string(argv[2]);              // get algorithm from command line
 
     int numberOfProcess = findNumProc(inputFile);       // finding number of process
@@ -27,8 +31,9 @@ int main(int argc, char* argv[]) {
         algFunc = 1;
     if (typeOfAlgorithm == "RR") {            // if RR we set number for switch and quantum time from user
         algFunc = 2;
-        if (argv[4]) {
-            quantumTime = atoi(argv[3]);
+        if (argv[3]) {
+            quantumTime = atoi(argv[2]);
+            //quantumTime = 4;                // test quantum time
         } else {                              // if none is given
             cout << "quantum time is needed to run the round robin algorithm\n";
             quantumTime = -100;
