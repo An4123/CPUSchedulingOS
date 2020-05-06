@@ -5,11 +5,8 @@
 //
 // Comments:
 
-#include "readyQueue.h"
 #include <iostream>
-
-
-
+#include "readyQueue.h"
 
 readyQueue::readyQueue() {
     for (auto &i : myQueue) {

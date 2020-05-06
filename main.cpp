@@ -10,7 +10,6 @@
 #include <sstream>
 #include <iomanip>
 #include "readyQueue.h"
-
 using namespace std;
 
 // declration of functions

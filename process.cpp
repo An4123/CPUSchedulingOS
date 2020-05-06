@@ -3,7 +3,6 @@
 //
 
 #include "process.h"
-#include "process.h"
 
 process::process() {
     PID = 0;
