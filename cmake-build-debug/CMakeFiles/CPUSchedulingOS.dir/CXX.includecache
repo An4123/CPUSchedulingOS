@@ -1,0 +1,40 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+D:/GitHub Repos/CPUSchedulingOS/main.cpp
+iostream
+-
+fstream
+-
+sstream
+-
+iomanip
+-
+readyQueue.h
+D:/GitHub Repos/CPUSchedulingOS/readyQueue.h
+process.h
+D:/GitHub Repos/CPUSchedulingOS/process.h
+
+D:/GitHub Repos/CPUSchedulingOS/process.cpp
+process.h
+D:/GitHub Repos/CPUSchedulingOS/process.h
+process.h
+D:/GitHub Repos/CPUSchedulingOS/process.h
+
+D:/GitHub Repos/CPUSchedulingOS/process.h
+
+D:/GitHub Repos/CPUSchedulingOS/readyQueue.cpp
+readyQueue.h
+D:/GitHub Repos/CPUSchedulingOS/readyQueue.h
+iostream
+-
+
+D:/GitHub Repos/CPUSchedulingOS/readyQueue.h
+process.h
+D:/GitHub Repos/CPUSchedulingOS/process.h
+
