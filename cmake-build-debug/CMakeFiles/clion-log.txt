@@ -1,4 +1,0 @@
-C:\Users\super\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\193.6494.38\bin\cmake\win\bin\cmake.exe -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - MinGW Makefiles" "D:\GitHub Repos\CPUSchedulingOS"
--- Configuring done
--- Generating done
--- Build files have been written to: D:/GitHub Repos/CPUSchedulingOS/cmake-build-debug

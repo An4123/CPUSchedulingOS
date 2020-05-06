@@ -4,7 +4,7 @@
 #make
 #./matrix  (or whatever you call the TARGET)
 
-SOURCES = main.cpp readyQueue.cpp process.cpp readyQueue.h process.h
+SOURCES = main.cpp readyQueue.cpp process.cpp
 
 ######Change from matrix to (for example hw1) .#######
 TARGET = VoLab3
