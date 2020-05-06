@@ -4,6 +4,7 @@
 // Assignment: Lab 3
 
 #include <iostream>
+#include <string>
 #include "Functions.h"
 using namespace std;
 
@@ -11,13 +12,14 @@ int main(int argc, char* argv[]) {
     string inputFile;
     string typeOfAlgorithm;
     int algFunc = -1;
+    size_t sz;
     int quantumTime = 0;
 
-//    int quantumTime = 4;              // test quantumtime
+//    long int quantumTime = 4;              // test quantumtime
 //    inputFile = "input4";             // test input
-//    typeOfAlgorithm = "FCFS";         // test algorithms
+//    typeOfAlgorithm = "RR";         // test algorithms
 
-     inputFile = string(argv[1]);                    // get input file from command line
+    inputFile = string(argv[1]);                    // get input file from command line
     typeOfAlgorithm = string(argv[2]);              // get algorithm from command line
 
     int numberOfProcess = findNumProc(inputFile);       // finding number of process
@@ -32,8 +34,8 @@ int main(int argc, char* argv[]) {
     if (typeOfAlgorithm == "RR") {            // if RR we set number for switch and quantum time from user
         algFunc = 2;
         if (argv[3]) {
-            quantumTime = atoi(argv[2]);
-            //quantumTime = 4;                // test quantum time
+            quantumTime = stoi(argv[3], &sz);
+//            quantumTime = 4;                // test quantum time
         } else {                              // if none is given
             cout << "quantum time is needed to run the round robin algorithm\n";
             quantumTime = -100;
@@ -52,7 +54,8 @@ int main(int argc, char* argv[]) {
                 SRTF(allProcess, numberOfProcess);
                 break;
             case 2:
-                RR(allProcess, numberOfProcess, quantumTime);
+                //cout << " QT" << quantumTime << endl;
+                RR(allProcess, numberOfProcess, int(quantumTime));
                 break;
             default:
                 cout << "Error in initializing code \n";
